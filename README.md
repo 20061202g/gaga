@@ -1,1 +1,563 @@
-# gaga
+
+<!DOCTYPE html>
+<html lang="pt-br">																																																		
+        <meta name="barbearia antiga" content="barbearia antiga. Aqui você pode agendar um horário, 
+        mandar uma mensagem e assinar nossa newsletter.">
+        <meta name="viewport" content="width=device-width">
+
+        <title>Barbearia Alura - Contato</title>
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap">
+    </head>
+    <body>
+        <header>
+            <div class="cabecalho">
+                <h1>
+                    <a href="index.html" title="Página inicial">
+                        <img src="img/logo.png" alt="Logo da Barbearia Alura na cor preta."
+                        width="177" height="250" id="logo"> 
+                    </a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="produtos.html">Produtos</a>
+                        </li>
+                        <li>
+                            <a href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form>
+                <p>Os campos com * são obrigatórios!</p>
+                <label for="nomecompleto">Nome Completo*</label>
+                <input class="input-padrao" type="text" id="nomecompleto" required
+                placeholder="Nome e Sobrenome">
+
+                <label for="email">Email*</label>
+                <input class="input-padrao" type="email" id="email" required
+                placeholder="seuemail@dominio.com">
+
+                <label for="telefone">Telefone*</label>
+                <input class="input-padrao" type="tel" id="telefone" required
+                placeholder="(xx) xxxxx-xxxx">
+
+                <label for="mesagem">Mensagem</label>
+                <textarea cols="70" rows="5" id="mensagem"
+                placeholder="Ex.: Gostaria de agendar um corte de cabelo e barba para o próximo sábado."></textarea>
+
+                <fieldset>
+                    <legend>Em qual horário prefere seu atendimento?</legend>
+                    <select>
+                        <option>Manhã</option>
+                        <option>Tarde</option>
+                        <option>Noite</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como prefere o nosso contato?</legend>
+
+                    <label for="radio-email">
+                        <input type="radio" name="contato" value="email" id="radio-email">
+                        Email
+                    </label>
+
+                    <label for="radio-telefone">
+                        <input type="radio" name="contato" value="telefone" id="radio-telefone">
+                        Telefone
+                    </label>
+
+                    <label for="radio-whatsapp">
+                        <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>
+                        WhatsApp
+                    </label>
+                </fieldset>
+
+                <label class="checkbox">Gostaria de receber nossas novidades por email?
+                    <input type="checkbox" checked>
+                </label>
+
+                <input class="enviar" type="submit" value="Enviar">
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dias</th>
+                        <th>Horários</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>De Terça à Sexta</td>
+                        <td>Das 8h às 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sábados e Domingos</td>
+                        <td>Das 9h às 18h</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Estamos te esperando!</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </main>
+        <footer>
+            <div class="logo-footer">
+                <img src="img/logo-branco.png" alt="Logo da Barbearia Alura na cor branca."
+                width="177" height="250">
+            </div>
+            <div class="redes">
+                <a href="https://github.com/xLucaspx" title="xLucaspx | GitHub">
+                    <img src="img/github-logo.png" alt="Logo do GitHub" width="45" height="45">
+                </a>
+                <a href="https://www.linkedin.com/in/xlucaspx/" title="Lucas da Paz | LinkedIn">
+                    <img src="img/linkedin-logo.png" alt="Logo do LinkedIn" width="45" height="45">
+                </a>
+                <a href="https://www.instagram.com/luacspaz/" title="Luacs da Paz (@luacspaz) | Instagram">
+                    <img src="img/instagram-logo.png" alt="Logo do Instagram" width="45" height="45">
+                </a>
+            </div>
+            <p class="copyright">Desenvolvido por Lucas da Paz</p>
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2022</p>
+        </footer>
+    </body>
+</html>
+ 48 changes: 48 additions & 0 deletions48  
+css/reset.css
+@@ -0,0 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ 366 changes: 366 additions & 0 deletions366  
+css/style.css
+@@ -0,0 +1,366 @@
+/* Fonte */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+/* CSS header */
+header {
+    background: linear-gradient(#72c2f4,#009ccf);
+    padding-top: 15px;
+}
+.cabecalho {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+#logo:hover {
+    transition: 1s;
+    transform: scale(1.1);
+}
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+nav li {
+    display: inline;
+    margin-left: 15px;
+}
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+}
+nav a:hover {
+    transition: 0.2s;
+    color: #e54516;
+    text-decoration: underline;
+}
+/* CSS home */
+#banner {
+    width: 100%;
+    height: auto;
+}
+.home {
+    background: linear-gradient(#c18f6e, #dba053, #760f00);
+}
+.principal {
+    padding: 3em 0;
+    width: 940px;
+    margin: 0 auto;
+}
+.titulo-principal {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#utensilios {
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: auto 15px 15px auto;
+    border: 1px solid #781500;
+}
+#utensilios:hover {
+    transition: 0.5s;
+    box-shadow: 3px 3px 3px #781500;
+    opacity: 75%;
+}
+.principal p {
+    text-align: left;
+    margin: 10px;
+}
+strong {
+    font-weight: bold;
+}
+#missao {
+    font-size: 22px;
+}
+#missao strong {
+    font-style: italic;
+    font-weight: bold;
+    color: #1d3557;
+}
+.localizacao {
+    padding: 3rem 0;
+}
+.localizacao p {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.mapa {
+    width: 940px;
+    margin: 0 auto;
+}
+.beneficios {
+    padding: 3em 0;
+}
+.conteudo-beneficios {
+    width: 640px;
+    margin: 10px auto;
+}
+.lista-beneficios {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+.itens {
+    line-height: 1.5;
+    font-style: italic;
+}
+.itens:first-child {
+    font-weight: bold;
+}
+.itens:before {
+    font-weight: bold;
+    content: "\2730";
+}
+#imagem-beneficios {
+    opacity: 75%;
+    width: 50%;
+    height: auto;
+}
+#imagem-beneficios:hover {
+    transition: 0.5s;
+    opacity: 100%;
+    box-shadow: 10px 12px 5px #781500;
+}
+.video {
+    width: 560px;
+    margin: 3rem auto;
+}
+/* CSS produtos */
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.produtos li {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    border: 2px solid #dba053;
+    border-radius: 10% 25%;
+    text-align: center;
+}
+.produtos li:hover {
+    transition: 0.5s;
+    border-color: #781500;
+}
+.produtos li:hover h2 {
+    transition: 0.5s;
+    font-size: 30px;
+}
+.produtos li:hover .produtos-preco {
+    transition: 0.5s;
+    font-size: 25px;
+}
+.produtos li:active {
+    transition: 0s;
+    border-color: #a77d4d;
+}
+.produtos h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+.produtos-descricao {
+    text-align: center;
+}
+.produtos-preco {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* CSS contato */
+form {
+    width: 940px;
+    margin: 0 auto;
+}
+form p {
+    text-align: left;
+    font-size: 14px;
+    font-style: italic;
+    padding: 2em 0;
+}
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.input-padrao {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+}
+textarea {
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+legend {
+    padding: 15px 0 5px;
+}
+select {
+    width: 10%;
+    text-align: center;
+}
+.checkbox {
+    margin: 20px 0;
+}
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background-color: #e54516;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.enviar:hover {
+    transition: 0.5s;
+    background-color: #781500;
+    transform: scale(1.1);
+}
+table {
+    background-color: white;
+    margin: 2rem 10rem;
+    box-shadow: 5px 10px 5px #988b7b;
+    width: 40%;
+}
+thead {
+    background-color: #009ccf;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px 20px;
+    text-align: center;
+}
+footer {
+    text-align: center;
+    background-image: url(../img/bg.jpg);
+    padding: 15px 0px;
+}
+.copyright {
+    font-size: 13px;
+    color: white;
+    margin-top: 15px;
+}
+/* Media queries */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+    .cabecalho, .principal, .mapa, .conteudo-beneficios, .video, 
+    .produtos, form {
+        width: auto;
+    }
+    /* Header */
+    header {
+        padding: 5px 0;
+    }
+    .cabecalho {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    nav a {
+        font-size: 20px;
+    }
+    nav a:active {
+        color: #e54516;
+        text-decoration: underline;
+    }
+    /* Home */
+    .principal {
+        padding: 1rem 0;
+        margin: auto 1rem;
+    }
+    .titulo-principal {
+        font-size: 20px;
+    }
+    #utensilios {
+        width: 100px;
+        height: 100px;
+        margin: 0 1rem;
+        box-shadow: 3px 3px 3px #781500;
+    }
+    #missao {
+        font-size: 18px;
+    }
+    .localizacao {
+        margin: 1rem;
+        padding: 0;
+    }
+    .beneficios {
+        padding: 1rem 0;
+        margin: 1rem;
+    }
+    .lista-beneficios {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    #imagem-beneficios {
+        width: 100%;
+        opacity: 100%;
+        box-shadow: 6px 8px 4px #781500;
+    }
+    /* Produtos */
+    .produtos {
+        text-align: center;
+    }
+    .produtos li {
+        display: inline-block;
+        width: 75%;
+        margin: 1rem 2rem;
+    }
+    /* Contato */
+    form {
+        margin: 0 20px;
+    }
+    form p {
+        font-size: 12px;
+    }
+    form label, form legend {
+        font-size: 16px;
+    }
+    .input-padrao {
+        padding: 5px 10px;
+        width: 80%;
+    }
+    textarea {
+        padding: 5px 10px;
+        width: 85%;
+    }
+    select {
+        width: 30%;
+    }
+    .enviar {
+        width: 60%;
+    }
+    table {
+        margin: 20px 25px;
+        width: 70%;
+    }
+    thead {
+        font-size: 16px;
+    }
+    th, td {
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+}
+ Binary file addedBIN +66.8 KB 
+img/banner.jpg
+
+ Binary file addedBIN +18.5 KB 
+img/barba.jpgimg/bg.jpg
+
